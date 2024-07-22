@@ -2,7 +2,7 @@
 /*
 تنشر اذكر الصدر @kalfn_000
 ob_start();
-$API_KEY = 'توكنك';
+$API_KEY = '7261646905:AAGYcsKwk31AZY10116b7xneCOBp3fFdd-';
 define('API_KEY',$API_KEY);
 echo file_get_contents("https://api.telegram.org/bot" . API_KEY . "/setwebhook?url=" . $_SERVER['SERVER_NAME'] . "" . $_SERVER['SCRIPT_NAME']);
             function bot($method,$datas=[]){
@@ -16,7 +16,7 @@ $alwsh = "@kalfn_000";
 $sudo = "7357875725";
 $Dev = array("637549705","",""); //ID ADMIN NUMBER 1 HE CHAT
 //****************//
-@$usernamebot = "kalfn_000"; //UserName Bot
+@$usernamebot = "@Sanfor000_Bot"; //UserName Bot
 @$channel = "kalfn_000"; // UserName Channel don't @
 @$token = 7261646905:AAGYcsKwk31AZY10116b7xneCOBp3fFdd-4
 
