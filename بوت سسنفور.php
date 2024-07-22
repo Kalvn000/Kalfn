@@ -1,7 +1,6 @@
 <?php
 /*
-تنشر اذكر الصدر @THTSS
-*/
+تنشر اذكر الصدر @kalfn_000
 ob_start();
 $API_KEY = 'توكنك';
 define('API_KEY',$API_KEY);
@@ -12,14 +11,15 @@ echo file_get_contents("https://api.telegram.org/bot" . API_KEY . "/setwebhook?u
         $XT1XT1 = file_get_contents($url);
         return json_decode($XT1XT1);
 }
-$buyy = "TTPFF";
-$alwsh = "@TTPFF";
-$sudo = "637549705";
+$buyy = "kalfn_000";
+$alwsh = "@kalfn_000";
+$sudo = "7357875725";
 $Dev = array("637549705","",""); //ID ADMIN NUMBER 1 HE CHAT
 //****************//
-@$usernamebot = "TTPFF"; //UserName Bot
-@$channel = "THTSS"; // UserName Channel don't @
-@$token = API_KEY;
+@$usernamebot = "kalfn_000"; //UserName Bot
+@$channel = "kalfn_000"; // UserName Channel don't @
+@$token = 7261646905:AAGYcsKwk31AZY10116b7xneCOBp3fFdd-4
+
 $update = json_decode(file_get_contents('php://input'));
 @$message = $update->message;
 @$from_id = $message->from->id;
@@ -35,14 +35,14 @@ $update = json_decode(file_get_contents('php://input'));
 @$fromid = $update->callback_query->from->id;
 @$membercall = $update->callback_query->id;
 @$reply = $update->message->reply_to_message->forward_from->id;
-/*===== dev ~ @OO1OOO =====*/
+/*===== dev ~ @kalfn_000 =====*/
 @$data = $update->callback_query->data;
 @$messageid = $update->callback_query->message->message_id;
 @$tc = $update->message->chat->type;
 @$gpname = $update->callback_query->message->chat->title;
 @$namegroup = $update->message->chat->title;
 @$text = $update->inline_qurey->qurey;
-/*===== dev ~ @OO1OOO =====*/
+/*===== dev ~ @kalfn_000 =====*/
 @$newchatmemberid = $update->message->new_chat_member->id;
 @$newchatmemberu = $update->message->new_chat_member->username;
 @$rt = $update->message->reply_to_message;
@@ -63,7 +63,7 @@ $chatid3=$update->message->chat->id;
 $fromid3=$update->message->from->id;
 $text=$update->message->text;
 $mid=$update->message->message_id;
-/*===== dev ~ @OO1OOO =====*/
+/*===== dev ~ @kalfn_000 =====*/
 @$statjson = json_decode(file_get_contents("https://api.telegram.org/bot$token/getChatMember?chat_id=$chat_id&user_id=".$from_id),true);
 @$status = $statjson['result']['status'];
 @$statjsonrt = json_decode(file_get_contents("https://api.telegram.org/bot$token/getChatMember?chat_id=$chat_id&user_id=".$re_id),true);
@@ -76,14 +76,14 @@ $mid=$update->message->message_id;
 @$tch = $forchannel->result->status;
 $title =$message->chat->title;
 $rep = $message->reply_to_message;
-/*===== dev ~ @OO1OOO =====*/
+/*===== dev ~ @kalfn_000 =====*/
 @$settings = json_decode(file_get_contents("data/$chat_id.json"),true);
 @$settings2 = json_decode(file_get_contents("data/$chatid.json"),true);
 @$editgetsettings = json_decode(file_get_contents("data/$chat_edit_id.json"),true);
 @$user = json_decode(file_get_contents("data/user.json"),true);
 @$filterget = $settings["filterlist"];
 
-/*===== فاكشن =====*/
+/*===== kalfn =====*/
 function SendMessage($chat_id, $text){
 bot('sendMessage',[
 'chat_id'=>$chat_id,
@@ -152,7 +152,7 @@ bot('sendMessage', [
 👨‍✈️ ¦ مرحبا بگ عزيزي 🙇‍♂،
 👾 ¦ لا يمڪنـك استخدام البوت ،
 📟 ¦ عليك الإشتراگ في قناة البوت ،
-🖲 ¦ القناة ~⪼ @THTSS ،
+🖲 ¦ المطور~⪼ @Kalfn_000 ،
 ▂ ▂ ",
 'reply_markup'=>json_encode([
       'inline_keyboard'=>[
@@ -280,7 +280,6 @@ file_put_contents("data/developers/developers.txt","~» (" . "@". $re_user .")  
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم رفعه مطور في البوت 
 ➖
 ",
@@ -290,7 +289,6 @@ bot('SendMessage',['chat_id'=>$chat_id,
 if($re and $text == "رفع مطور"  and $re_id !=$id_Bot and in_array($from_id,$Dev)  and in_array($re_id,$developer)){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم رفعه مطور من قبل
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
@@ -301,17 +299,16 @@ file_put_contents("$re_id.txt",$re_id);
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
-🎖┊تم رفعه مطور اساسي معك
+🎖┊تم رفعه مطوراساسي
 ➖
 ",
 'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
 }
-if($re and $text == "رفع مطور"  || $text == "رفع ادمن" || $text == "رفع مميز" || $text == "رفع مدير" || $text == "رفع منشئ" and $re_id ==$bot_id and in_array($from_id,$Dev)){
+if($re and $text == "رفع مطور"  || $text == "رفع ادمن" || $text == "رفع مميز" || || $text == "رفع منشئ" and $re_id ==$bot_id and in_array($from_id,$Dev)){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
-📮 ❉ لاتحرجناش والله ماريد 😹😹
+📮 ❉ لا متحرجناش مش عايز 😹😹
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
 }
@@ -331,7 +328,7 @@ if($text == "مسح المطورين" and $cdevs == 0 and in_array($from_id,$Dev
 $cdevs = count($developers);
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
-📬┊عذرا ! لم يتم رفع اي مطورين
+📬┊مفيش مطورين
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
@@ -347,7 +344,6 @@ bot('SendMessage',[
 'chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم رفعه مدير بالبوت
 ➖"
 ,'parse_mode'=>'markdown',
@@ -361,7 +357,6 @@ if($status == "creator" ||  in_array($from_id,$Dev) || in_array($from_id,$develo
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم رفعه مدير من قبل
 ➖
 ",
@@ -566,13 +561,13 @@ bot('SendMessage',['chat_id'=>$chat_id,
 file_put_contents("data/$chat_id/seen.txt","864321168");
 }
 }
-if($text == "مسح المدراء" and $mangers_info != NULL and $mangers_info != " "){
+if($text == "مسح المديرين" and $mangers_info != NULL and $mangers_info != " "){
 if($status == "creator" ||  in_array($from_id,$Dev) || in_array($from_id,$developer)) {
 $cmang = count($mangers)-1;
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊بواسطة الـ $info
-👤┊تم حذف {$cmang} من المدراء
+👤┊تم حذف {$cmang} من المديرين
 ➖",
 'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,  
 ]);
@@ -580,11 +575,11 @@ file_put_contents("data/manger/$chat_id.txt","");
 file_put_contents("data/manger/$chat_id.txt","");
 file_put_contents("data/manger/$chat_id/mange.txt" ,"");
 }}
-if($text == "مسح المدراء" and $mangers_info == NULL or $mangers_info == " "){
+if($text == "مسح المديرين" and $mangers_info == NULL or $mangers_info == " "){
 if($status == "creator" ||  in_array($from_id,$Dev) || in_array($from_id,$developer)) {
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"*
-📬┊عذرا ! لم يتم رفع اي ممدراء
+📬┊عذرا ! لم يتم رفع اي مديرين
 ➖",
 'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,  
 ]);
@@ -601,8 +596,7 @@ if($re and $text == "تنزيل المدير" || $text == "تنزيل مدير" 
 	bot('SendMessage',['chat_id'=>$chat_id,
     'text'=>"
 📬┊العضو » [$usew]
-??┊ايديه » {$re_id}
-🎖┊تم حذفه من المدراء
+🎖┊تم حذفه من المديرين
 ➖
 ",
 'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
@@ -613,7 +607,6 @@ if($re and $text == "تنزيل المدير" || $text == "تنزيل مدير" 
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊انه ليس مدير
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
@@ -632,7 +625,6 @@ if($re and $text == "تنزيل مطور" || $text == "تنزيل المطور" 
 	bot('SendMessage',['chat_id'=>$chat_id,
     'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم تنزيله من المطورين
 ➖
 ",
@@ -644,8 +636,7 @@ if($re and $text == "تنزيل المطور" || $text == "تنزيل مطور" 
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
-🎖┊انه ليس مطور ليتم حذفه !
+🎖:دا مش مطور يع!
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
@@ -671,7 +662,6 @@ if($re and $text == "رفع ادمن"  and !in_array($re_id,$admin_user)){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم رفعه ادمن في البوت
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
@@ -683,8 +673,7 @@ if ($re and $text == "رفع ادمن" and in_array($re_id,$admin_user)){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
-🎖┊تم رفعه ادمن بالبوت قبلا
+🎖:رفعته ادمن قبل كدا🙄
 ➖
 ",
 'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
@@ -716,7 +705,6 @@ if($re and $text == "تنزيل ادمن" and in_array($re_id,$admin_user)){
 	bot('SendMessage',['chat_id'=>$chat_id,
     'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم تنزيله من الادمنيه
 ➖
 ",
@@ -730,7 +718,7 @@ bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
 👤┊ايديه » {$re_id}
-🎖┊انه ليس ادمن ليتم تنزيله
+🎖┊دا مش ادمن عشان انزله !
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
@@ -744,8 +732,7 @@ file_put_contents("data/mmyaz/$chat_id/mange.txt" , "| {[" . "@". $re_user ."]} 
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
-🎖┊تم رفعه عضو مميز
+🎖┊تم رفعه عضو مميز انبسط يعم
 ➖
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
@@ -756,7 +743,6 @@ if($re and $text == "رفع مميز"  and in_array($re_id,$mmyaz)){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
 📬┊العضو » [$usew]
-👤┊ايديه » {$re_id}
 🎖┊تم رفعه مميز من قبل
 ➖
 ",
@@ -823,7 +809,7 @@ bot('SendMessage',['chat_id'=>$chat_id,
 📬┊بواسطـة $info
 ـــ ـــ ـــ ــــ ــــ 
 🗑┊تم حذف {$CA} من الادمنيه
-🗑┊تم حذف {$CM} من المدراء
+🗑┊تم حذف {$CM} من المديرين
 🗑┊تم حذف {$CMM} من المميزين
 ـــ ـــ ـــ ــــ ــــ 
 📛┊تم حذف {$CALL} من المرفوعين
@@ -845,7 +831,7 @@ if($status != "creator" and $status != "administrator" and !in_array($from_id,$D
 if($text == "رفع مدير" || $text == "رفع منشئ" or $text == "رفع الادمنيه" or $text == "رفع الادمنية" or $text == "تفعيل"){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
-📬┊عذرا ! هاذا الامر ليس لك
+📬:مينفعش تنزل حد انت مش رتبه
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
 }}
@@ -853,7 +839,7 @@ if( !in_array($from_id,$Dev)){
 if($text == "رفع مطور" || $text == "تنزيل مطور" or $text == "رفع منشئ" or $text == "المطورين" or $text == "مسح مطور"){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
-📬┊عذرا ! هاذا الامر ليس لك
+📬┊يعم انت قولتلك قبل كده انت مش معاك رتبه
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
 }}
@@ -861,7 +847,7 @@ if($status != "creator" and $status != "administrator" and !in_array($from_id,$D
 if($text == "رفع ادمن" || $text == "رفع مميز" or $text == "م1" or $text == "م2" or $text == "م3" or $text == "م4" or $text == "م5" or $text == "قفل الصور" or $text == "تنزيل مميز" or $text == "تنزيل ادمن" or $text == "قفل الفيديو" or $text == "فتح الفيديو" or $text == "تفعيل الايدي" or $text == "تعطيل الايدي"){
 bot('SendMessage',['chat_id'=>$chat_id,
 'text'=>"
-📬┊عذرا ! هاذا الامر ليس لك
+📬┊يابني انت غاوي تتعبني معاك انت مش معاك رتبه
 ",'parse_mode'=>'markdown','reply_to_message_id'=>$message->message_id,'disable_web_page_preview'=>true,
 ]);
 }}
@@ -891,25 +877,25 @@ bot('sendmessage',[
 }
 }
 $CM = count($mangers)-1;
-if($text == "المدراء" and $CM != 0){
+if($text == "المديرين" and $CM != 0){
 if ( $status == 'creator' or $status == 'administrator' or in_array($from_id,$Dev) or in_array($from_id,$developer)) {if ($tc == 'group' | $tc == 'supergroup'){
 bot('sendmessage',[
  'chat_id'=>$chat_id,
  'text'=>"
-👨🏻‍💻┇المدراء [{$CM}] : 
+👨🏻‍💻┇المديرين [{$CM}] : 
 $mangers_infos
 ",
 ]);
 }
 }
 }
-if($text == "المدراء" and $CM == 0){
+if($text == "المديرين" and $CM == 0){
 if ( $status == 'creator' or $status == 'administrator' or in_array($from_id,$Dev) or in_array($from_id,$developer)) {if ($tc == 'group' | $tc == 'supergroup'){
 bot('sendmessage',[
  'chat_id'=>$chat_id,
  'text'=>
 "
-📬┊عذرا ! لم يتم رفع اي مدراء
+📬┊عذرا ! لم يتم رفع اي مديرين
 ➖",
 ]);
 }
@@ -1005,7 +991,7 @@ else
 {
 bot('sendmessage',[
 	'chat_id'=>$chat_id,
-	'text'=>" لايمكنني تقييد الادمنية او المدراء او  او المميزين",
+	'text'=<$ل تقييد الادمنية او المدراء او  او المميزين",
   'reply_to_message_id'=>$message_id,
 'reply_markup'=>$inlinebutton,
  ]);
